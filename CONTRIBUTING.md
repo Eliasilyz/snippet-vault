@@ -174,12 +174,12 @@ Commits should be written in **imperative mood** ("add feature" not "added featu
 
 Before opening a pull request, please make sure you can check all of the following:
 
-- [ ] `npm test` passes locally
-- [ ] `npm run lint` reports no errors
-- [ ] New functionality has corresponding tests
-- [ ] Existing JSDoc comments are preserved; new public functions have JSDoc
-- [ ] The PR description clearly explains **what** changed and **why**
-- [ ] If this closes an issue, the PR description includes `Closes #<issue-number>`
+- [x] `npm test` passes locally
+- [x] `npm run lint` reports no errors
+- [x] New functionality has corresponding tests
+- [x] Existing JSDoc comments are preserved; new public functions have JSDoc
+- [x] The PR description clearly explains **what** changed and **why**
+- [x] If this closes an issue, the PR description includes `Closes #<issue-number>`
 
 ---
 
