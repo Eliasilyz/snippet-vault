@@ -24,6 +24,18 @@ function register(program) {
     .action(async (name, options) => {
       const snippets = readSnippets();
 
+      // Validating if name is longer than 64
+      if (name.length > 64) {
+        console.error(`Error: Snippet name cannot exceed 64 characters (got ${name.length})`);
+        process.exit(1);
+      }
+      
+      // Validating if name contains characters other than letters, numbers, hyphens and underscores
+      if (!/^[a-zA-Z0-9_-]+$/.test(name)) {
+        console.error('Error: A snippet cannot contain characters other than letters, numbers, hyphens and underscores.');
+        process.exit(1);
+      }
+
       if (findByName(snippets, name)) {
         console.error(`Error: A snippet named "${name}" already exists. Use a different name or remove the existing one first.`);
         process.exit(1);
